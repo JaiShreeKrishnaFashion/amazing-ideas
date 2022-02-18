@@ -1,0 +1,1 @@
+export const SET_COLLAPSE_MODE='SET_COLLAPSE_MODE';
