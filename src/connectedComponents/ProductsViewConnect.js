@@ -8,8 +8,6 @@ const ProductsViewConnect = () => {
   const dispatch = useDispatch();
   const { displayproductsItems, productsData = [] } =
     useSelector(productsViewProps);
-  console.log(productsData);
-
   useEffect(() => {
     dispatch(productsInitiateAction());
   }, [dispatch]);
