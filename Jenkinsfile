@@ -1,15 +1,14 @@
 
 pipeline {
-    agent {
-        any
-    }
+  agent any
     environment {
         CI = 'true'
     }
     stages {
         stage('Build') {
             steps {
-                sh 'npm install'
+                sh "npm install"
+                sh "npm run build"
             }
         }
         stage('Test') {
@@ -19,7 +18,9 @@ pipeline {
         }
         stage('Deliver') {
             steps {
-                sh './jenkins/scripts/deliver.sh'
+                sh 'rm -rf /var/www/jenkins-react-ap'
+                echo "${WORKSPACE}/build/"
+                sh 'cp -r ${WORKSPACE}/build/ /var/www/jenkins-react-app/'
                 input message: 'Finished using the web site? (Click "Proceed" to continue)'
                 sh './jenkins/scripts/kill.sh'
             }
