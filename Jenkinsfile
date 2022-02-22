@@ -4,7 +4,6 @@ pipeline {
     stage('Install Dependencies') {
       steps {
         git(url: 'https://github.com/JaiShreeKrishnaFashion/amazing-ideas.git', branch: 'main')
-        sh 'npm install --verbose'
         echo 'npm install success'
       }
     }
