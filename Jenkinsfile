@@ -3,13 +3,9 @@ pipeline {
   stages {
     stage('Install Dependencies') {
       steps {
-        echo 'Build Success'
-        sh '''rm package-lock.json
-'''
-        sh '''npm cache clean --force
-'''
-        sh 'npm install --verbose'
         git(url: 'https://github.com/JaiShreeKrishnaFashion/amazing-ideas.git', branch: 'main')
+        sh "npm install --verbose"
+        echo "npm install success"
       }
     }
 
