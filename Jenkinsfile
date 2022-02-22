@@ -9,6 +9,7 @@ pipeline {
         sh '''npm cache clean --force
 '''
         sh 'npm install --verbose'
+        git(url: 'https://github.com/JaiShreeKrishnaFashion/amazing-ideas.git', branch: 'main')
       }
     }
 
