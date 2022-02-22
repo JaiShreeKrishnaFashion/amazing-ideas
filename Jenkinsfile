@@ -5,8 +5,10 @@ pipeline {
       steps {
         echo 'Build Success'
         sh '''rm package-lock.json
-npm cache clean --force
-npm install --verbose'''
+'''
+        sh '''npm cache clean --force
+'''
+        sh 'npm install --verbose'
       }
     }
 
@@ -19,7 +21,8 @@ npm install --verbose'''
     stage('Build Directory') {
       steps {
         sh '''mkdir -p build
-chmod -R 777 build/'''
+'''
+        sh 'chmod -R 777 build/'
       }
     }
 
