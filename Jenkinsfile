@@ -1,31 +1,41 @@
 pipeline {
   agent any
- nodejs 'NodeJS 16.13.2'
-  stages {
-    stage('Install Dependencies') {
-      steps {
-        git(url: 'https://github.com/JaiShreeKrishnaFashion/amazing-ideas.git', branch: 'main')
-        sh 'npm install'
-        echo 'npm install success'
-      }
-    }
 
-    stage('Unit Test') {
-      steps {
-        sh 'npm run test'
-      }
-    }
-
-    stage('Build Directory') {
-      steps {
-        sh '''mkdir -p build
-'''
-        sh 'chmod -R 777 build/'
-      }
-    }
+  tools{
+    nodejs 'NodeJS 8.9.0'
 
   }
-  environment {
-    node = 'true'
+
+  stages{
+      stage(build){
+        when{
+            changeset "**/result/**"
+          }
+
+        steps{
+          echo 'Compiling result app..'
+          dir('worker'){
+            sh 'npm install'
+          }
+        }
+      }
+      stage(test){
+        when{
+          changeset "**/result/**"
+        }
+        steps{
+          echo 'Running Unit Tets on result app..'
+          dir('result'){
+            sh 'npm test'
+           }
+
+          }
+      }
+  }
+
+  post{
+    always{
+        echo 'Building multibranch pipeline for worker is completed..'
+    }
   }
 }
