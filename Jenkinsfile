@@ -20,7 +20,8 @@ pipeline {
 
     stage('Setup Build Directory') {
       steps {
-        bat 'md build'
+        bat 'npm run build'
+        bat 'npm run deploy'
         echo 'Build Success...'
       }
     }
