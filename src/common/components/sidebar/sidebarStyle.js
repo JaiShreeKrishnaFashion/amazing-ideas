@@ -45,4 +45,4 @@ export const useStyles = makeStyles({
   },
 });
 
-export { useStyles, SideBarTitle, SideBarListItems, SideBarListContent };
+export { SideBarTitle, SideBarListItems, SideBarListContent };
