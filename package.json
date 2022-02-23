@@ -20,7 +20,7 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "react-scripts build && cp CNAME build/CNAME",
+    "build": "react-scripts build && -cmd copy /y CNAME build/CNAME",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build",
     "test": "npm run coverage",
