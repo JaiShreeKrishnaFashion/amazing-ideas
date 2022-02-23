@@ -1,17 +1,17 @@
 import { makeStyles } from "@material-ui/core/styles";
 import Styled from "styled-components";
 
-export const SideBarTitle = Styled.div`
+const SideBarTitle = Styled.div`
   color: #fff !important;
   background-color: #616161 !important;
   width: 100%;
   overflow: hidden;
 `;
-export const SideBarListItems = Styled.div`
+const SideBarListItems = Styled.div`
 display:block;
 background-color:'#999';
  `;
-export const SideBarListContent = Styled.a`
+const SideBarListContent = Styled.a`
   width: 100%;
     display: block;
     padding: 8px 0px;
@@ -24,7 +24,7 @@ export const SideBarListContent = Styled.a`
     cursor:pointer;
     `;
 
-export const useStyles = makeStyles({
+const useStyles = makeStyles({
   sidebarMain: {
     width: "215px",
     color: "#000!important",
@@ -45,4 +45,4 @@ export const useStyles = makeStyles({
   },
 });
 
-export { SideBarTitle, SideBarListItems, SideBarListContent };
+export { useStyles, SideBarTitle, SideBarListItems, SideBarListContent };
