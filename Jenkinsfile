@@ -32,6 +32,7 @@ pipeline {
     stage('Deployment') {
       steps {
         bat 'npm run deploy'
+        bat 'stop'
         echo 'Application Deployed Successfully!!'
         
       }
