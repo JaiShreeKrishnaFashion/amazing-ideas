@@ -29,7 +29,6 @@ pipeline {
     stage('Deployment') {
       steps {
         bat 'npm run deploy'
-       
         echo 'Application Deployed Successfully!!'
       }
     }
