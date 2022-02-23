@@ -20,8 +20,8 @@ pipeline {
 
     stage('Setup Build Directory') {
       steps {
-        bat 'mkdir -p dist'
-        bat 'chmod -R 777 dist/'
+        bat 'mkdir build'
+        bat 'chmod -R 777 build/'
         echo 'Build Success...'
       }
     }
