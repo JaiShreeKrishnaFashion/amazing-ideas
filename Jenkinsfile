@@ -22,6 +22,8 @@ pipeline {
       steps {
         bat 'npm run build'
         bat 'npm run deploy'
+        bat 'git config --global user.email "jaishreekrishna@myoption.in"'
+        bat 'git config --global user.name "deepak"'
         echo 'Build Success...'
       }
     }
