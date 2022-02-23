@@ -1,5 +1,8 @@
 pipeline {
   agent any
+  environment{
+    CI='true'
+  }
    stages {
     stage('Install Dependencies') {
       steps {
@@ -28,9 +31,9 @@ pipeline {
 
     stage('Deployment') {
       steps {
-        bat '.jenkins/workspace/updating-amazing-ideas/build'
+        bat './jenkins/workspace/updating-amazing-ideas/build'
         echo 'Application Deployed Successfully!!'
-        bat '.jenkins/workspace/updating-amazing-ideas/kill.bat'
+        bat './jenkins/workspace/updating-amazing-ideas/kill.bat'
       }
     }
 
