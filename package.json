@@ -6,11 +6,12 @@
   "dependencies": {
     "@material-ui/core": "^4.12.3",
     "axios": "^0.25.0",
+    "jest": "^27.5.1",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-redux": "^7.2.6",
     "react-router-dom": "^6.2.1",
-    "react-scripts": "^3.0.1",
+    "react-scripts": "^5.0.0",
     "redux": "^4.1.2",
     "redux-saga": "^1.1.3",
     "redux-thunk": "^2.4.1",
@@ -25,6 +26,28 @@
     "test": "npm run coverage",
     "coverage": "cross-env LOG_LEVEL=warn NODE_ENV=test jest --coverage",
     "eject": "react-scripts eject"
+  },
+  "jest": {
+    "verbose": true,
+    "collectCoverage":true,
+    "coverageDirectory":"coverage",
+    "coveragePathIgnorePatterns":["<rootDir>/build/", "<rootDir>/node_modules/"],
+    "coverageReporters": ["clover", "json", "lcov", ["text", {"skipFull": true}]],
+      "coverageThreshold": {
+      "global": {
+        "branches": 0,
+        "functions": 0,
+        "lines": 0,
+        "statements":0
+      }
+    },
+     "collectCoverageFrom": [
+    "**/src/components/*.{js,jsx}",
+     "**/src/middleware/**/*.{js,jsx}",
+      "**/src/common/components/**/*.{js,jsx}",
+    "!**/node_modules/**",
+    "!**/vendor/**"
+  ]
   },
   "eslintConfig": {
     "extends": [
