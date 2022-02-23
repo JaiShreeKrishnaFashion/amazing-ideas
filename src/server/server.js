@@ -7,7 +7,7 @@ app.get("/products", function (req, res) {
     __dirname + "/" + "responseData/products.json",
     "utf8",
     function (err, data) {
-      console.log(data);
+      //console.log(data);
       res.end(data);
     }
   );
@@ -15,5 +15,5 @@ app.get("/products", function (req, res) {
 var server = app.listen(8000, function () {
   var host = server.address().address;
   var port = server.address().port;
-  console.log("APU listening port ", host, port);
+  //console.log("APU listening port ", host, port);
 });

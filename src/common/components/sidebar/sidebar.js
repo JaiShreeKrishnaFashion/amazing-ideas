@@ -8,12 +8,12 @@ import {
 
 const SideBar = ({ contents, selectedItemView }) => {
   const handleClick = (id) => {
-    console.log(id);
+    //console.log(id);
     return selectedItemView(id);
   };
 
   const classes = useStyles();
-  console.log("sidebar data", contents[0]);
+  //console.log("sidebar data", contents[0]);
   return (
     <div className={classes.sidebarMain}>
       <div className={classes.main}>

@@ -10,6 +10,6 @@ export function* getProductCategoryTask(queryParams) {
     ...queryParams,
   });
   const { response: data } = yield call(getService, { serviceUrl });
-  //console.log(data);
+  ////console.log(data);
   return yield call(productsCategoryTransformer, data);
 }

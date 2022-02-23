@@ -3,6 +3,6 @@ import { appInitializeWatcher } from "../store/applicationFlow/appInitializeWatc
 import { productsInitializeWatcher } from "../store/productsView/productsViewWatcher";
 
 export default function* rootSaga() {
-  console.log("rootSaga");
+  //console.log("rootSaga");
   yield all([...appInitializeWatcher, ...productsInitializeWatcher]);
 }

@@ -8,10 +8,10 @@ const ViewRouterConnect = () => {
   const viewType = useSelector(
     (state) => state.appRouterReducer.viewScreenType
   );
-  console.log(viewType);
+  //console.log(viewType);
   const component = ViewRouteMapper.find((x) => x.id === viewType)?.component;
   if (component) {
-    console.log(component);
+    //console.log(component);
     return component;
   }
 

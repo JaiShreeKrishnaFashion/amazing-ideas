@@ -6,7 +6,7 @@ import MainContainer from "../components/maincontainer";
 const MainViewConnect = () => {
   const dispatch = useDispatch();
   const productsViewDisplay = () => {
-    console.log("call products view");
+    //console.log("call products view");
     dispatch(setViewScreenTypeAction(VIEW_ROUTE_SCREENS.PRODUCTS_VIEW));
   };
   return (

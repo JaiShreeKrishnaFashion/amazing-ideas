@@ -8,7 +8,7 @@ import {
 } from "../styles/globalStyle";
 
 const productsView = ({ productsData, selectedItemView }) => {
-  console.log("inside products view::", productsData[0]);
+  //console.log("inside products view::", productsData[0]);
 
   return (
     <Wrapper>

@@ -9,18 +9,18 @@ const LayoutViewConnect = () => {
   }, [dispatch]);
 
   const redirect = (navigate) => {
-    console.log(navigate);
+    //console.log(navigate);
     switch (navigate.navigateId) {
       case "home":
         dispatch(initiateApplicationAction());
         break;
       case "contact us":
-        console.log("contact us");
+        //console.log("contact us");
         break;
       default:
         dispatch(initiateApplicationAction());
     }
-    console.log("redirect");
+    //console.log("redirect");
   };
   return (
     <React.Fragment>

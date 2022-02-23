@@ -11,7 +11,7 @@ export function productsCategoryTransformer(apiResponse) {
   const data = {};
   const error = {};
   let isSuccess = false;
-  console.log(apiResponse);
+  //console.log(apiResponse);
   if (apiResponse) {
     isSuccess = true;
     data.status = "SUCCESS";
