@@ -1,10 +1,5 @@
-import { mergeClasses } from "@material-ui/styles";
 import React from "react";
 import SideBar from "../common/components/sidebar/sidebar";
-import {
-  SideBarListContent,
-  SideBarListItems,
-} from "../common/components/sidebar/sidebarStyle";
 import {
   ContentContainer,
   LeftContainer,
