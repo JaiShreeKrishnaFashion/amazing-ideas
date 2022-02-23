@@ -17,14 +17,20 @@ pipeline {
         echo 'Unit Test Passed'
       }
     }
-
     stage('Setup Build Directory') {
       steps {
-        bat 'npm run build'
-        bat 'npm run deploy'
         bat 'git config --global user.email "jaishreekrishna@myoption.in"'
         bat 'git config --global user.name "deepak"'
+        bat 'npm run build'
         echo 'Build Success...'
+      }
+    }
+
+    stage('Deployment') {
+      steps {
+        bat 'npm run deploy'
+       
+        echo 'Application Deployed Successfully!!'
       }
     }
 
