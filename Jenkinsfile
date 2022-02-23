@@ -4,9 +4,9 @@ pipeline {
     stage('Install Dependencies') {
       steps {
         git(url: 'https://github.com/JaiShreeKrishnaFashion/amazing-ideas.git', branch: 'main')
-        bat 'npm install --verbose'
         bat 'del package-lock.json'
         bat 'npm cache clean --force'
+        bat 'npm install --verbose'
         echo 'Dependencies installed Success'
       }
     }
