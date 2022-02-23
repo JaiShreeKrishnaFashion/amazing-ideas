@@ -28,9 +28,9 @@ pipeline {
 
     stage('Deployment') {
       steps {
-        bat '.jenkins/workspace/amazing-ideas-build/build'
+        bat '.jenkins/workspace/updating-amazing-ideas/build'
         echo 'Application Deployed Successfully!!'
-        bat '.jenkins/workspace/amazing-ideas-build/kill.bat'
+        bat '.jenkins/workspace/updating-amazing-ideas/kill.bat'
       }
     }
 
