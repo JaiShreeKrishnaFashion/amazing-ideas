@@ -20,7 +20,7 @@ pipeline {
 
     stage('Setup Build Directory') {
       steps {
-        md 'build'
+        bat 'build'
         echo 'Build Success...'
       }
     }
