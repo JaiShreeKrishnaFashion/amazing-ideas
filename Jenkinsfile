@@ -1,6 +1,6 @@
 pipeline {
   agent any
-//   stages {
+   stages {
 //     stage('Install Dependencies') {
 //       steps {
 //         git(url: 'https://github.com/JaiShreeKrishnaFashion/amazing-ideas.git', branch: 'main')
