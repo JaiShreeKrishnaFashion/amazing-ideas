@@ -21,7 +21,7 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "predeploy": "npm run build",
-    "deploy": "main/docs -d build",
+    "deploy": "main -d build",
     "test": "npm run coverage",
     "coverage": "cross-env LOG_LEVEL=warn NODE_ENV=test jest --coverage",
     "eject": "react-scripts eject"
