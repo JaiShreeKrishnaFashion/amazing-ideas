@@ -13,6 +13,7 @@ export const ViewRouteMapper = [
     id: VIEW_ROUTE_SCREENS.PRODUCTS_VIEW,
     component: <ProductsViewConnect />,
   },
+
   {
     id: VIEW_ROUTE_SCREENS.PROCESSING,
     component: <ProcessingScreen message={PROCESSING} processing />,
