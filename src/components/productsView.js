@@ -1,4 +1,5 @@
 import React from "react";
+import RightPanelViewConnect from "../connectedComponents/RightPanelViewConnect";
 import SideBar from "../common/components/sidebar/sidebar";
 import {
   ContentContainer,
@@ -7,21 +8,17 @@ import {
   Wrapper,
 } from "../styles/globalStyle";
 
-const productsView = ({ productsData, selectedItemView }) => {
+const productsView = ({ productsData, handleClick }) => {
   //console.log("inside products view::", productsData[0]);
 
   return (
     <Wrapper>
       <LeftContainer>
-        <SideBar
-          contents={productsData}
-          selectedItemView={selectedItemView}
-        ></SideBar>
+        <SideBar contents={productsData} handleClick={handleClick}></SideBar>
       </LeftContainer>
       <ContentContainer>
-        <h2>selected view under construction</h2>
+        <RightPanelViewConnect />
       </ContentContainer>
-      <RightContainer>Right</RightContainer>
     </Wrapper>
   );
 };

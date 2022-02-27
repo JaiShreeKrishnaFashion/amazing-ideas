@@ -33,28 +33,32 @@ const FullContainer = styled.div`
 `;
 const ContentContainer = styled.div`
   display: grid;
-  grid-template-columns: ${({ collapsed }) =>
-    collapsed ? "30vw 65vw" : "100vw 100vw"};
-  width: 100%;
-  position: relative;
+  grid-template-columns: 99vw 100vw;
+  position: static;
   overflow: hidden;
   display: grid;
-  grid-template-columns: 100vw 100vw;
-  padding-left: 30px;
   border: 1px solid #ccc;
   height: auto;
 `;
 const LeftContainer = styled.div`
   grid-area: Left;
   background: #fff;
-  position: relative;
+  position: fixed;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-align-items: flex-end;
+  -webkit-box-align: flex-end;
+  -ms-flex-align: flex-end;
   align-items: flex-end;
   height: 100%;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
   flex-direction: column;
   border: 1px solid #ccc;
-  width: 20%;
   padding-bottom: 20px;
+  top: 44px;
 `;
 const RightContainer = styled.div`
   grid-area: Right;

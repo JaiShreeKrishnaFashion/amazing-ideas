@@ -6,14 +6,8 @@ import {
   SideBarListContent,
 } from "./sidebarStyle";
 
-const SideBar = ({ contents, selectedItemView }) => {
-  const handleClick = (id) => {
-    //console.log(id);
-    return selectedItemView(id);
-  };
-
+const SideBar = ({ contents, handleClick }) => {
   const classes = useStyles();
-  //console.log("sidebar data", contents[0]);
   return (
     <div className={classes.sidebarMain}>
       <div className={classes.main}>
@@ -24,7 +18,7 @@ const SideBar = ({ contents, selectedItemView }) => {
             <SideBarListItems
               hoverActive
               key={index}
-              onClick={(event) => handleClick(contents[item].id)}
+              onClick={() => handleClick(contents[item].id)}
             >
               <SideBarListContent
                 className={index === 0 ? classes.defaultActive : ""}
