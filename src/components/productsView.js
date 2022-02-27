@@ -12,13 +12,13 @@ const productsView = ({ productsData, handleClick }) => {
   //console.log("inside products view::", productsData[0]);
 
   return (
-    <Wrapper>
-      <LeftContainer>
+    <Wrapper id="product_wrapper">
+      <LeftContainer id="left_panel">
         <SideBar contents={productsData} handleClick={handleClick}></SideBar>
       </LeftContainer>
-      <ContentContainer>
+      <RightContainer id="right_panel">
         <RightPanelViewConnect />
-      </ContentContainer>
+      </RightContainer>
     </Wrapper>
   );
 };

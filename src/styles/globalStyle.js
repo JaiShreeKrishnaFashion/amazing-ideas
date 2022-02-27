@@ -41,38 +41,25 @@ const ContentContainer = styled.div`
   height: auto;
 `;
 const LeftContainer = styled.div`
-  grid-area: Left;
-  background: #fff;
-  position: fixed;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: flex-end;
-  -webkit-box-align: flex-end;
-  -ms-flex-align: flex-end;
-  align-items: flex-end;
-  height: 100%;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  border: 1px solid #ccc;
-  padding-bottom: 20px;
-  top: 44px;
+  flex:2
+  border: solid 1px #ccc;
+  height:auto;
+  margin-right: auto;
+
 `;
 const RightContainer = styled.div`
-  grid-area: Right;
-  background: #fff;
-  position: relative;
-  margin-right: ${({ collapsed }) => (collapsed ? "" : "32px")};
+  border: solid 1px #ccc;
+  margin-left: auto;
+  flex: 10;
+  height: auto;
 `;
 const LayoutContainer = styled.div`
   width: 100%;
 `;
 const Wrapper = styled.div`
-  width: 100%;
+  border: solid 1px #ccc;
   display: flex;
-  height: 100%;
+  justify-content: space-between;
 `;
 const PageTitle = styled.p`
   color: #fff;
