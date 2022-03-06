@@ -16,6 +16,7 @@ const useStyles = makeStyles({
     width: "100%",
     objectFit: "cover",
     borderRadius: "8px",
+    height: "100px",
   },
 });
 export { useStyles };

@@ -2,12 +2,14 @@ import { call, put } from "redux-saga/effects";
 import { INVALID_DATA } from "../../../constants/applicationConstants";
 import { VIEW_ROUTE_SCREENS } from "../../../constants/constant";
 import { setViewScreenTypeAction } from "../appRouter/appRouterActionCreator";
+import { rightPanelInitiateAction } from "../rightpanel/rightPanelActionCreator";
 import { getProductCategoryTask } from "./productsTask";
 import { productsViewDisplayCategoryAction } from "./productsViewActionCreator";
 
 export function* initiateProductsViewProcessor() {
   //console.log("products view processor");
   yield call(productsCategoryProcessor);
+  yield put(rightPanelInitiateAction());
 }
 
 export function* productsCategoryProcessor() {

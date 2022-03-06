@@ -2,6 +2,7 @@ export const HEADER_VIEWS = {
   HOME: "HOME",
   ABOUT_US: "ABOUT_US",
   CONTACT_US: "CONTACT_US",
+  RESPONSIVE: "RESPONSIVE",
 };
 export const LANGUAGE_OPTIONS = {
   en: "englishUSA",

@@ -10,6 +10,7 @@ const Header =({navigate})=>{
         <NavItemList onClick={()=>navigate({navigateId:'home'})} ><DisplayLocalText tid={HEADER_VIEWS.HOME}/></NavItemList>
         <NavItemList onClick={()=>navigate({navigateId:'contact us'})}><DisplayLocalText tid={HEADER_VIEWS.CONTACT_US}/></NavItemList>
         <NavItemList onClick={(event)=>navigate(event)}><DisplayLocalText tid={HEADER_VIEWS.ABOUT_US}/></NavItemList>
+        <NavItemList onClick={(event)=>navigate({navigateId:'responsiveLayout'})}><DisplayLocalText tid={HEADER_VIEWS.RESPONSIVE}/></NavItemList>
         
        </NavItem>
         </NavItemContainer>

@@ -4,10 +4,15 @@ import ProductsViewConnect from "../connectedComponents/ProductsViewConnect";
 import MainViewConnect from "../connectedComponents/MainViewConnect";
 import ProcessingScreen from "../common/components/transitions/processing";
 import { PROCESSING } from "../constants/applicationConstants";
+import ResponsiveViewConnect from "../connectedComponents/ResponsiveViewConnect";
 export const ViewRouteMapper = [
   {
     id: VIEW_ROUTE_SCREENS.LANDING_VIEW,
     component: <MainViewConnect />,
+  },
+  {
+    id: VIEW_ROUTE_SCREENS.RESPONSIVE_VIEW,
+    component: <ResponsiveViewConnect />,
   },
   {
     id: VIEW_ROUTE_SCREENS.PRODUCTS_VIEW,

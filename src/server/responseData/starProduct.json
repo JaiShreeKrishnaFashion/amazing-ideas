@@ -1,7 +1,8 @@
 {
-  "A": [
+  "starData":{
+     "A": [
     {
-      "img": "data:image/jpeg;base64,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",
+      "img": "../assets/images/starProducts/A/Ayushman_Khurana.jpeg",
       "title": "Ayushman Khurana",
       "specialPrice": "$17999",
       "oriPrice": "$34999"
@@ -29,58 +30,25 @@
       "title": "Abhishek Bachan"
     },
     {
-      "img": "https://s.yimg.com/zp/MerchandiseImages/38D5C91EBF-Product-20678834.jpg",
-      "title": "",
+      "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/70/Abhay_Deol_at_Femina_Miss_India_2014.jpg/220px-Abhay_Deol_at_Femina_Miss_India_2014.jpg",
+      "title": "Abhay Deol",
       "specialPrice": "$17999",
       "oriPrice": "$34999"
     },
     {
-      "img": "https://s.yimg.com/zp/MerchandiseImages/339BEEDBF1-Gd-8615522.jpg",
-      "title": "",
+      "img": "https://upload.wikimedia.org/wikipedia/commons/2/24/Aditya_Roy_Kapur_in_2021.jpg",
+      "title": "Aditya Roy Kapur",
       "specialPrice": "$23688",
       "oriPrice": "$24900"
     },
     {
-      "img": "https://s.yimg.com/zp/MerchandiseImages/AD34BB3446-Gd-7448332.jpg",
-      "title": "",
+      "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e6/Akshaye_Khanna_still2.jpg/220px-Akshaye_Khanna_still2.jpg",
+      "title": "Akshya Khanna",
       "specialPrice": "$115",
       "oriPrice": "$200"
-    },
-    {
-      "img": "https://s.yimg.com/zp/MerchandiseImages/39216872AC-Gd-8778203.jpg",
-      "title": "",
-      "specialPrice": "折100",
-      "oriPrice": "$1199"
-    },
-    {
-      "img": "https://s.yimg.com/zp/MerchandiseImages/789778D0E9-Gd-8129802.jpg",
-      "title": "",
-      "specialPrice": "$990起",
-      "oriPrice": "$18500"
-    },
-    {
-      "img": "https://s.yimg.com/zp/MerchandiseImages/B810F61664-Gd-8735341.jpg",
-      "title": "",
-      "specialPrice": "95折",
-      "oriPrice": ""
-    },
-    {
-      "img": "https://s.yimg.com/zp/MerchandiseImages/E290A65F00-SP-7909134.jpg",
-      "title": "",
-      "specialPrice": "$590up",
-      "oriPrice": "$1380"
-    },
-    {
-      "img": "https://s.yimg.com/zp/MerchandiseImages/FAD93DEE00-SP-7594913.jpg",
-      "title": "",
-      "specialPrice": "$799起",
-      "oriPrice": "$1690"
-    },
-    {
-      "img": "https://s.yimg.com/zp/MerchandiseImages/4A5E9BD839-Gd-7821787.jpg",
-      "title": "",
-      "specialPrice": "83折",
-      "oriPrice": "$2380"
     }
   ]
+  }
+  
+ 
 }

@@ -6,8 +6,9 @@ export const selectStarViewDomain = (state = {}) =>
 
 export const starViewProps = createSelector(
   selectStarViewDomain,
-  ({ isStarProducts, starProductsData }) => ({
+  ({ isStarProducts, starProductsData, title }) => ({
     isStarProducts,
     starProductsData,
+    title,
   })
 );

@@ -23,6 +23,10 @@ import {
   starProductInitialState,
   starProductReducer,
 } from "../starProduct/starProductReducer";
+import {
+  movieProductInitialState,
+  movieProductReducer,
+} from "../movieProduct/movieProductReducer";
 
 export const appReducer = combineReducers({
   appConfigurationReducer,
@@ -31,6 +35,7 @@ export const appReducer = combineReducers({
   productsViewReducer,
   rightPanelReducer,
   starProductReducer,
+  movieProductReducer,
 });
 const initialState = {
   appConfigurationReducer: appConfigurationInitialState,
@@ -39,6 +44,7 @@ const initialState = {
   productsViewReducer: productsViewInitialState,
   rightPanelReducer: rightPanelInitialState,
   starProductReducer: starProductInitialState,
+  movieProductReducer: movieProductInitialState,
 };
 const rootReducer = (state, action) => {
   if (action.type === "RESET_APP") {

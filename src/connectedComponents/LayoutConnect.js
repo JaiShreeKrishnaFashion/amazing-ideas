@@ -1,6 +1,9 @@
 import React, { useEffect } from "react";
 import { useDispatch } from "react-redux";
-import { initiateApplicationAction } from "../middleware/store/applicationFlow/appInitializeActionCreator";
+import {
+  initiateApplicationAction,
+  initiateResponsiveAction,
+} from "../middleware/store/applicationFlow/appInitializeActionCreator";
 import Layout from "../components/layout";
 const LayoutViewConnect = () => {
   const dispatch = useDispatch();
@@ -16,6 +19,10 @@ const LayoutViewConnect = () => {
         break;
       case "contact us":
         //console.log("contact us");
+        break;
+      case "responsiveLayout":
+        dispatch(initiateResponsiveAction());
+
         break;
       default:
         dispatch(initiateApplicationAction());

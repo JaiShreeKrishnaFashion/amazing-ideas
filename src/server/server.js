@@ -22,6 +22,17 @@ app.get("/starProducts", function (req, res) {
     }
   );
 });
+app.get("/movieProducts", function (req, res) {
+  fs.readFile(
+    __dirname + "/" + "responseData/movieProduct.json",
+    "utf8",
+    function (err, data) {
+      //console.log(data);
+      res.end(data);
+    }
+  );
+});
+
 var server = app.listen(8000, function () {
   var host = server.address().address;
   var port = server.address().port;

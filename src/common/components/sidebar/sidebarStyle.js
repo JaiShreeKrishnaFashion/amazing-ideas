@@ -8,8 +8,8 @@ const SideBarTitle = Styled.div`
   overflow: hidden;
 `;
 const SideBarListItems = Styled.div`
+background-color: ${(props) => (props.active ? "#4CAF50" : "#fff")};
 display:block;
-background-color:'#999';
  `;
 const SideBarListContent = Styled.a`
   width: 100%;
