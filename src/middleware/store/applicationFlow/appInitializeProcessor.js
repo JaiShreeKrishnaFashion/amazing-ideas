@@ -6,3 +6,7 @@ export function* initiateApplicationProcessor() {
   //console.log("application initiated");
   yield put(setViewScreenTypeAction(VIEW_ROUTE_SCREENS.LANDING_VIEW));
 }
+export function* initiateResponsiveLayoutProcessor() {
+  //console.log("application initiated");
+  yield put(setViewScreenTypeAction(VIEW_ROUTE_SCREENS.RESPONSIVE_VIEW));
+}

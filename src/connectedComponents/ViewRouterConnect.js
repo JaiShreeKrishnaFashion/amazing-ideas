@@ -1,7 +1,7 @@
 import React, { memo } from "react";
 import { compose } from "redux";
 import { useSelector } from "react-redux";
-import { ViewRouteMapper } from "../components/ViewRouterMapper";
+import { ViewRouteMapper } from "../routers/ViewRouterMapper";
 import Default from "../components/defaultPanel";
 
 const ViewRouterConnect = () => {

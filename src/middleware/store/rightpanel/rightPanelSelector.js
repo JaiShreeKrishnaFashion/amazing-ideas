@@ -6,7 +6,8 @@ export const selectRightPanelViewDomain = (state = {}) =>
 
 export const rightPanelViewProps = createSelector(
   selectRightPanelViewDomain,
-  ({ title }) => ({
+  ({ title, rightPanelType }) => ({
     title,
+    rightPanelType,
   })
 );

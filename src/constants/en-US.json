@@ -2,6 +2,7 @@
     "HOME":"Home",
     "ABOUT_US":"About US",
     "CONTACT_US":"Contact Us",
+    "RESPONSIVE":"ResponsiveLayout",
     "APP_INITIALIZATION_ERROR_MESSAGE_TID":"An error occured while initializing the application.\nRetry or signout and sign back in",
     "APPLICATION_TITLE":"Hurray!!!! Count Down will start soon.",
     "PROCESSING":"Processing..."
