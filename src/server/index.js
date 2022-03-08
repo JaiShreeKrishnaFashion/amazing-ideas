@@ -2,6 +2,7 @@ var http = require("http");
 var express = require("express");
 var app = express();
 var fs = require("fs");
+let port = process.env.PORT || 8000;
 app.get("/products", function (req, res) {
   fs.readFile(
     __dirname + "/" + "responseData/products.json",
@@ -33,7 +34,7 @@ app.get("/movieProducts", function (req, res) {
   );
 });
 
-var server = app.listen(8000, function () {
+var server = app.listen(port, function () {
   var host = server.address().address;
   var port = server.address().port;
   //console.log("APU listening port ", host, port);
