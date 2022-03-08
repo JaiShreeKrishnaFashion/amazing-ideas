@@ -1,28 +1,28 @@
 import React from "react";
 import Cards from "../../common/components/cards/cards";
 import { Wrapper } from "../../styles/globalStyle";
+import { ProductsTitle } from "../rightPanelView/rightPanel.style";
 import {
-  AcronymTitle,
-  ProductsTitle,
+  ProductsCardWrapper,
   ProductsPanel,
-} from "../rightPanelView/rightPanel.style";
-import { useStyles, ProductsCardWrapper } from "./movieProducts.style";
-const MovieProductsView = ({ movieProductsData, title }) => {
-  console.log("movieProductsView", movieProductsData);
+  useStyles,
+} from "./starProducts.style";
+
+const StarProductsCollection = ({ starCollectionData = [], title }) => {
+  console.log("starProducts collection", starCollectionData);
   const classes = useStyles();
   return (
-    //   {/* <AcronymTitle>title</AcronymTitle> */}
     <React.Fragment>
       <ProductsTitle>{title}</ProductsTitle>
-      <Wrapper id="start_products_view">
+      <Wrapper id="star_products_collection_view">
         <ProductsPanel id="cardsPanel_view" className={classes.cardsPanelView}>
           <ProductsCardWrapper>
-            {movieProductsData?.length !== 0 &&
-              movieProductsData?.map((items, index) => {
+            {starCollectionData?.length !== 0 &&
+              starCollectionData?.map((items, index) => {
                 return (
                   <Cards
-                    imgAddress={items.img}
-                    imgCaption={items.title}
+                    waterMark={items.title}
+                    waterMarkImg={items.img}
                   ></Cards>
                 );
               })}
@@ -33,4 +33,4 @@ const MovieProductsView = ({ movieProductsData, title }) => {
   );
 };
 
-export default MovieProductsView;
+export default StarProductsCollection;

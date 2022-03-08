@@ -7,6 +7,7 @@ import {
 } from "./sidebarStyle";
 
 const SideBar = ({ contents, handleClick, active }) => {
+  console.log("active", active);
   const classes = useStyles();
   return (
     <div className={classes.sidebarMain}>
@@ -17,11 +18,13 @@ const SideBar = ({ contents, handleClick, active }) => {
           Object.keys(contents).map((item, index) => (
             <SideBarListItems
               key={index}
-              active={active}
-              onClick={() => handleClick(contents[item].id)}
+              onClick={(isActive) => handleClick(contents[item].id, isActive)}
             >
               <SideBarListContent
-                className={index === 0 ? classes.defaultActive : ""}
+                active={active}
+                className={({ isActive }) =>
+                  isActive ? classes.active : classes.inActive
+                }
               >
                 {contents[item].name}
               </SideBarListContent>

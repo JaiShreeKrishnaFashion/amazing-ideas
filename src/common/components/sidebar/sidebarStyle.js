@@ -8,7 +8,7 @@ const SideBarTitle = Styled.div`
   overflow: hidden;
 `;
 const SideBarListItems = Styled.div`
-background-color: ${(props) => (props.active ? "#4CAF50" : "#fff")};
+
 display:block;
  `;
 const SideBarListContent = Styled.a`
@@ -22,6 +22,7 @@ const SideBarListContent = Styled.a`
     outline: 0;
     font-family: arial;
     cursor:pointer;
+    
     `;
 
 const useStyles = makeStyles({
@@ -37,11 +38,7 @@ const useStyles = makeStyles({
   },
   active: {
     color: "#fff!important",
-    backgroundColor: "#4CAF50!important",
-  },
-  defaultActive: {
-    color: "#fff!important",
-    backgroundColor: "#4CAF50!important",
+    backgroundColor: "#4CAF50",
   },
 });
 

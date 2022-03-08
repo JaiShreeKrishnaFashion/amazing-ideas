@@ -8,7 +8,7 @@ import {
   ProductsPanel,
 } from "../rightPanelView/rightPanel.style";
 import { useStyles } from "./starProducts.style";
-const StarProductsView = ({ starProductsData, title }) => {
+const StarProductsView = ({ starProductsData, title, cardClick }) => {
   console.log("starProductsView", starProductsData);
   const classes = useStyles();
   return (
@@ -24,6 +24,7 @@ const StarProductsView = ({ starProductsData, title }) => {
                   <Cards
                     imgAddress={items.img}
                     imgCaption={items.title}
+                    cardClick={cardClick}
                   ></Cards>
                 );
               })}

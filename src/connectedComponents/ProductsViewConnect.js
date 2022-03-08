@@ -14,7 +14,7 @@ import {
 } from "../middleware/store/rightpanel/rightPanelActionCreator";
 
 const ProductsViewConnect = () => {
-  const [active, setActive] = useState(false);
+  const [isActive, setActive] = useState(false);
   const dispatch = useDispatch();
   const { displayproductsItems, productsData = [] } =
     useSelector(productsViewProps);
@@ -22,17 +22,19 @@ const ProductsViewConnect = () => {
     dispatch(productsInitiateAction());
   }, [dispatch]);
 
-  const selectedItemView = (id) => {
+  const selectedItemView = (id, isActive) => {
     //dispatch(rightPanelInitiateAction(id));
-    setActive(true);
+
     switch (id) {
       case "Star":
         // yield put(starProductInitiateAction(true));
+        setActive(isActive);
         dispatch(
           setRightPanelScreenTypeAction(RIGHT_PANEL_VIEWS.STAR_VIEW_COMPONENT)
         );
         break;
       case "Movie":
+        setActive(true);
         dispatch(movieProductInitiateAction(""));
         dispatch(
           setRightPanelScreenTypeAction(RIGHT_PANEL_VIEWS.MOVIE_VIEW_COMPONENT)
@@ -52,6 +54,7 @@ const ProductsViewConnect = () => {
         break;
 
       default:
+        setActive(false);
         console.log("default");
     }
     console.log("id", id);
@@ -61,7 +64,7 @@ const ProductsViewConnect = () => {
     displayproductsItems: displayproductsItems,
     productsData: productsData,
     handleClick: selectedItemView,
-    active: active,
+    active: isActive,
   };
 
   return <ProductsView {...productsProps}></ProductsView>;

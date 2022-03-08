@@ -23,17 +23,6 @@ const ProductsPanel = Styled.div`
 display:block;
 background-color:'#999';
  `;
-const ProductsCardWrapper = Styled.div`
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
-  flex-direction: row;
-  @media (max-width: 768px) {
-    flex-direction: column;
-  }
-
-`;
 
 const useStyles = makeStyles({
   cardsPanelView: {
@@ -46,10 +35,4 @@ const useStyles = makeStyles({
   },
 });
 
-export {
-  useStyles,
-  ProductsTitle,
-  ProductsCardWrapper,
-  ProductsPanel,
-  AcronymTitle,
-};
+export { useStyles, ProductsTitle, ProductsPanel, AcronymTitle };
