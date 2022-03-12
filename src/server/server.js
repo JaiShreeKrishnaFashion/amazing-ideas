@@ -96,8 +96,26 @@ app.post("/resend", function (req, res) {
     res.render("otp", { msg: "otp has been sent" });
   });
 });
+<<<<<<< HEAD
 
 const PORT = process.env.PORT || 6000;
 app.listen(PORT, () => {
   console.log(`app is live at ${PORT}`);
+=======
+app.get("/movieProducts", function (req, res) {
+  fs.readFile(
+    __dirname + "/" + "responseData/movieProduct.json",
+    "utf8",
+    function (err, data) {
+      //console.log(data);
+      res.end(data);
+    }
+  );
+});
+
+var server = app.listen(8000, function () {
+  var host = server.address().address;
+  var port = server.address().port;
+  //console.log("APU listening port ", host, port);
+>>>>>>> 55a423e200a5f0035c63d7ed2a09ce7e531dd860
 });
